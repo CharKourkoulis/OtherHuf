@@ -6,6 +6,7 @@ import { NavComponent } from './nav/nav.component';
 import {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 @NgModule({
    declarations: [
@@ -19,7 +20,9 @@ import { RegisterComponent } from './register/register.component';
       HttpClientModule,
       FormsModule
    ],
-   providers: [],
+   providers: [
+     ErrorInterceptorProvider
+   ],
    bootstrap: [
       AppComponent
    ]
