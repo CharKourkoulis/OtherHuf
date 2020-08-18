@@ -10,6 +10,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TimeagoModule, TimeagoPipe } from 'ngx-timeago';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -47,7 +48,8 @@ export function tokenGetter() {
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      TimeagoPipe
    ],
    imports: [
       BrowserModule,
@@ -56,6 +58,7 @@ export function tokenGetter() {
       ReactiveFormsModule,
       BrowserAnimationsModule,
       NgxGalleryModule,
+      TimeagoModule.forRoot(),
       TabsModule.forRoot(),
       BsDatepickerModule.forRoot(),
       BsDropdownModule.forRoot(),
